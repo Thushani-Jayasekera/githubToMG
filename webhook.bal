@@ -26,12 +26,12 @@ final string[] & readonly columnNames = [
 ];
 
 // Email recepient address
-configurable string recipientAddress = "ddd";
+configurable string recipientAddress = ?;
 
 // Google sheets configuration parameters
 configurable OAuth2RefreshTokenGrantConfig GSheetAuthConfig = ?;
-configurable string spreadsheetId = "ddd";
-configurable string worksheetName = "ddd";
+configurable string spreadsheetId = ?;
+configurable string worksheetName = ?;
 
 listener http:Listener httpListener = new(8090);
 listener github:Listener gitHubListener =  new(gitHubListenerConfig,httpListener);
